@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: reactapp
-        image: arsom/reactapp-ci:7c14c14266667e7bee6bbf387eef29148aeaade8
+        image: arsom/reactapp:7c14c14266667e7bee6bbf387eef29148aeaade8
         imagePullPolicy: Always
         resources:
           limits:
