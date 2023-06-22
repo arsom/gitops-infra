@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: 
+  name: reactapp
+  namespace: argocd
+spec: 
+  destination: 
+    namespace: default
+    server: "https://kubernetes.default.svc"
+  project: default
+  source: 
+    path: /
+    repoURL: "https://github.com/arsom/gitops-infra.git"
+    targetRevision: main
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
